@@ -8,6 +8,43 @@
     <title>Erin Quiz App</title>
   </head>
   <body>
+    <div class="welcome-container" id="welcome">
+      <h1>Pop Culture Quiz</h1>
+      <p>Play this quiz!</p>
+      <button class="welcome-btn" id="welcome-btn">Start</button>
+    </div>
+    <!-- End: Welcome Container -->
+    <div class="container" id="quiz">
+      <!-- Start: Quiz Container -->
+      <div class="quiz-header">
+        <span id="current"></span>
+        <h2 class="question-txt" id="question-txt">Question</h2>
+
+        <ul class="questions">
+          <li class="question-item">
+            <input type="radio" name="answer" class="answer" id="a" />
+            <label for="a" id="a_text">Question</label>
+          </li>
+
+          <li class="question-item">
+            <input type="radio" name="answer" class="answer" id="b" />
+            <label for="b" id="b_text">Question</label>
+          </li>
+
+          <li class="question-item">
+            <input type="radio" name="answer" class="answer" id="c" />
+            <label for="c" id="c_text">Question</label>
+          </li>
+
+          <li class="question-item">
+            <input type="radio" name="answer" class="answer" id="d" />
+            <label for="d" id="d_text">Question</label>
+          </li>
+        </ul>
+        <button class="submit-btn" id="submit">Submit</button>
+      </div>
+    </div>
+    <!-- End: Quiz Container -->
     <script src="script.js"></script>
   </body>
 </html>
