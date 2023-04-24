@@ -102,6 +102,30 @@ const dText = document.getElementById('d_text');
 const curr = document.getElementById('current');
 const submitBtn = document.getElementById('submit');
 
+const mainTitleHeading = document.getElementById('main-title-heading');
+const mainTitleText = "Erin's Pop Culture Quiz";
+let textIndex = 1;
+let textWritingSpeed = 300;
+
+// Write the heading text
+writeHeadingtext();
+
+function writeHeadingtext() {
+  // Slice the first letter of the maintitleText into  the mainTitleHeading H1 element
+  mainTitleHeading.innerText = mainTitleText.slice(0, textIndex);
+
+  // Increase textIndex counter by 1
+  textIndex++;
+
+  // Check to make sure that the textIndex is not greater than the lenght of the string
+  if (textIndex > mainTitleText.length) {
+    textIndex = 1;
+  }
+
+  // repeatly call writeHeadingTextfunction every 300ms
+  setTimeout(writeHeadingtext, textWritingSpeed);
+}
+
 //console.log(welcome)
 // Add Event Listener To Welcome Button To Hide Screen
 
