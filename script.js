@@ -112,7 +112,7 @@ writeHeadingtext();
 
 function writeHeadingtext() {
   // Slice the first letter of the maintitleText into  the mainTitleHeading H1 element
-  mainTitleHeading.innerText = mainTitleText.slice(0, textIndex);
+  mainTitleHeading.textContent = mainTitleText.slice(0, textIndex);
 
   // Increase textIndex counter by 1
   textIndex++;
