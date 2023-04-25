@@ -99,7 +99,7 @@ const aText = document.getElementById('a_text');
 const bText = document.getElementById('b_text');
 const cText = document.getElementById('c_text');
 const dText = document.getElementById('d_text');
-const curr = document.getElementById('current');
+const currentQuestionNum = document.getElementById('current-question-number');
 const submitBtn = document.getElementById('submit');
 
 const mainTitleHeading = document.getElementById('main-title-heading');
@@ -146,10 +146,15 @@ function startQuiz() {
   // Unselect each input if it is checked
   deselectAnswerInput();
 
+  // Create variable to hold the current question object
   const currentText = questions[current];
 
-  // Insert The Question Properties Into The Dom
+  // Insert the current question number into the DOM
+  currentQuestionNum.textContent = `Question: ${current + 1} / ${
+    questions.length
+  }`;
 
+  // Insert The Question Properties Into The Dom
   questionEl.innerText = currentText.question;
   aText.innerText = currentText.a;
   bText.innerText = currentText.b;
