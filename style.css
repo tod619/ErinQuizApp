@@ -6,9 +6,11 @@
     Purple: #cdb4db 
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Lato:wght@300;400;700&display=swap');
 
-/* font-family: 'Lato', sans-serif; */
+/* font-family: 'Lato', sans-serif;
+  font-family: 'Fuzzy Bubbles', cursive;
+ */
 
 * {
   padding: 0;
@@ -31,18 +33,26 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #ffff;
   background-image: linear-gradient(to bottom right, #ffafcc 30%, #ffc8dd);
   z-index: 12;
 }
 
 .welcome-container.hide {
   display: none;
+}
+
+.main-heading {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 7.2rem;
+  letter-spacing: -5px;
+  margin-bottom: 2rem;
 }
 
 .container {
