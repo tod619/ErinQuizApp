@@ -204,3 +204,6 @@ function deselectAnswerInput() {
     answerElement.checked = false;
   });
 }
+
+//timer code
+const timeRemaining = document.getElementById('time');
