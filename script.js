@@ -133,8 +133,9 @@ welcomeBtn.addEventListener('click', () => {
   welcome.classList.add('hide');
   //clearInterval(timeInterval);
   //const timeInterval = setInterval(updateTime, 1000);
-  time = 10;
-  updateTime();
+  //time = 10;
+  //updateTime();
+  startTimer();
 });
 
 // Initialise Counter Variables
@@ -198,11 +199,11 @@ submitBtn.addEventListener('click', () => {
 
   if (current < questions.length) {
     //clearInterval(timeInterval);
-    time = 10;
+    //time = 10;
     startQuiz();
-    updateTime();
+    //updateTime();
   } else {
-    clearInterval(updateTime);
+    //clearInterval(updateTime);
     alert(`Your score is ${score}`);
   }
 });
@@ -217,17 +218,26 @@ function deselectAnswerInput() {
 const timeElement = document.getElementById('time');
 let time = 10;
 // start counting down
-const timeInterval = setInterval(updateTime, 1000);
+//const timeInterval = setInterval(updateTime, 1000);
 // Update time
+//function updateTime() {
+//time--;
+//timeElement.innerHTML = `${time}`;
+//console.log(time);
+//if (time === 0) {
+//clearInterval(timeInterval);
+//time = 10;
+//startQuiz();
+//updateTime();
+//alert('game over');
+//}
+//}
+
+function startTimer() {
+  let quizTimer = setInterval(updateTime, 1000);
+}
+
 function updateTime() {
   time--;
   timeElement.innerHTML = `${time}`;
-  //console.log(time);
-  if (time === 0) {
-    clearInterval(timeInterval);
-    //time = 10;
-    //startQuiz();
-    //updateTime();
-    alert('game over');
-  }
 }
