@@ -131,6 +131,10 @@ function writeHeadingtext() {
 
 welcomeBtn.addEventListener('click', () => {
   welcome.classList.add('hide');
+  //clearInterval(timeInterval);
+  //const timeInterval = setInterval(updateTime, 1000);
+  time = 10;
+  updateTime();
 });
 
 // Initialise Counter Variables
@@ -193,8 +197,12 @@ submitBtn.addEventListener('click', () => {
   // Add If/Else Statement To Increment Score & Alert Score When Quiz Finishes
 
   if (current < questions.length) {
+    //clearInterval(timeInterval);
+    time = 10;
     startQuiz();
+    updateTime();
   } else {
+    clearInterval(updateTime);
     alert(`Your score is ${score}`);
   }
 });
@@ -206,4 +214,20 @@ function deselectAnswerInput() {
 }
 
 //timer code
-const timeRemaining = document.getElementById('time');
+const timeElement = document.getElementById('time');
+let time = 10;
+// start counting down
+const timeInterval = setInterval(updateTime, 1000);
+// Update time
+function updateTime() {
+  time--;
+  timeElement.innerHTML = `${time}`;
+  //console.log(time);
+  if (time === 0) {
+    clearInterval(timeInterval);
+    //time = 10;
+    //startQuiz();
+    //updateTime();
+    alert('game over');
+  }
+}
