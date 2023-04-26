@@ -203,7 +203,7 @@ submitBtn.addEventListener('click', () => {
     startQuiz();
     //updateTime();
   } else {
-    //clearInterval(updateTime);
+    clearInterval(quizTimer);
     alert(`Your score is ${score}`);
   }
 });
@@ -216,7 +216,7 @@ function deselectAnswerInput() {
 
 //timer code
 const timeElement = document.getElementById('time');
-let time = 10;
+let time = 59;
 // start counting down
 //const timeInterval = setInterval(updateTime, 1000);
 // Update time
@@ -233,11 +233,18 @@ let time = 10;
 //}
 //}
 
+let quizTimer;
+
 function startTimer() {
-  let quizTimer = setInterval(updateTime, 1000);
+  quizTimer = setInterval(updateTime, 1000);
 }
 
 function updateTime() {
   time--;
   timeElement.innerHTML = `${time}`;
+
+  if (time === 0) {
+    alert('gameover');
+    clearInterval(quizTimer);
+  }
 }
