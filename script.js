@@ -204,7 +204,13 @@ submitBtn.addEventListener('click', () => {
     //updateTime();
   } else {
     clearInterval(quizTimer);
-    alert(`Your score is ${score}`);
+    // alert(`Your score is ${score}`);
+    quiz.innerHTML = `
+            <h2>
+                You have answered ${score}/${questions.length} questions correctly
+            </h2>
+            <button onclick='location.reload()'>Reload</button>
+            `;
   }
 });
 
@@ -244,7 +250,13 @@ function updateTime() {
   timeElement.innerHTML = `${time}`;
 
   if (time === 0) {
-    alert('gameover');
+    //alert('gameover');
+    quiz.innerHTML = `
+            <h2>
+                You have ran out of time
+            </h2>
+            <button onclick='location.reload()'>Reload</button>
+            `;
     clearInterval(quizTimer);
   }
 }
