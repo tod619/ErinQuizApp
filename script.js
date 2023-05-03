@@ -260,3 +260,22 @@ function updateTime() {
     clearInterval(quizTimer);
   }
 }
+
+// Create ripple effect for the submit btn
+let rippleEffect;
+
+submitBtn.addEventListener('mouseenter', (e) => {
+  //console.log('I have been entered');
+  const left = e.clientX - e.target.getBoundingClientRect().left;
+  const top = e.clientY - e.target.getBoundingClientRect().top;
+
+  rippleEffect = document.createElement('div');
+  rippleEffect.classList.add('ripple');
+  rippleEffect.style.left = `${left}px`;
+  rippleEffect.style.top = `${top}px`;
+  submitBtn.prepend(rippleEffect);
+});
+
+submitBtn.addEventListener('mouseleave', () => {
+  submitBtn.removeChild(rippleEffect);
+});

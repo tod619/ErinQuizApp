@@ -83,6 +83,7 @@ body {
 
 .quiz-header {
   padding: 4rem;
+  position: relative;
 }
 
 .question-txt {
@@ -134,6 +135,7 @@ body {
 
 .welcome-btn,
 .submit-btn {
+  /* position: absolute; */
   background-color: #cdb4db;
   color: #fff;
   font-family: inherit;
@@ -145,6 +147,16 @@ body {
   display: block;
   width: 100%;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.submit-btn {
+  position: absolute;
+  position: relative;
+  bottom: 0;
+  /* left: 50%;
+  transform: translateX(-50%);
+  width: 80%; */
 }
 
 .welcome-btn {
@@ -154,4 +166,45 @@ body {
   font-size: 2rem;
 }
 
+.submit-btn span {
+  /* position: relative; */
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  z-index: 100;
+  transition: all 0.1s 0.3s linear;
+}
+
+.submit-btn:hover span {
+  color: red;
+  transition: all 0.1s 0.1s linear;
+}
+
 /* style quiz  */
+
+/* Ripple effect style and keyframe animation */
+.ripple {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #e7be08;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  animation: rippleAnimation 0.5s ease-in forwards;
+  opacity: 0.2;
+}
+
+@keyframes rippleAnimation {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    width: 310%;
+    height: 310%;
+  }
+}
