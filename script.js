@@ -209,7 +209,7 @@ submitBtn.addEventListener('click', () => {
             <h2 class = 'game-over-heading'>
                 You have answered ${score}/${questions.length} questions correctly
             </h2>
-            <button onclick='location.reload()'>Reload</button>
+            <button onclick='location.reload()' class = "game-over-btn">Reload</button>
             `;
   }
 });
@@ -255,7 +255,7 @@ function updateTime() {
             <h2 class = "game-over-heading">
                 You have ran out of time
             </h2>
-            <button onclick='location.reload()'>Reload</button>
+            <button onclick='location.reload()' class = "game-over-btn">Reload</button>
             `;
     clearInterval(quizTimer);
   }
