@@ -206,7 +206,7 @@ submitBtn.addEventListener('click', () => {
     clearInterval(quizTimer);
     // alert(`Your score is ${score}`);
     quiz.innerHTML = `
-            <h2>
+            <h2 class = 'game-over-heading'>
                 You have answered ${score}/${questions.length} questions correctly
             </h2>
             <button onclick='location.reload()'>Reload</button>
@@ -252,7 +252,7 @@ function updateTime() {
   if (time === 0) {
     //alert('gameover');
     quiz.innerHTML = `
-            <h2>
+            <h2 class = "game-over-heading">
                 You have ran out of time
             </h2>
             <button onclick='location.reload()'>Reload</button>

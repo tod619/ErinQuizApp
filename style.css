@@ -73,6 +73,18 @@ body {
   box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.3);
   width: 600px;
   overflow: hidden;
+  /* Needs to add */
+  width: 60%;
+  height: 90%;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Needs to add */
+.game-over-heading {
+  font-size: 3rem;
+  margin: 10rem 0;
+  text-transform: uppercase;
 }
 
 .title-text {
