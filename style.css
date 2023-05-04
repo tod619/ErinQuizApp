@@ -208,3 +208,10 @@ body {
     height: 310%;
   }
 }
+
+/* Media quries */
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
